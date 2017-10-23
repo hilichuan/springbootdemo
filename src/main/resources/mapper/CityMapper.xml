@@ -2,6 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="b2c.example.dao.CityMapper" >
     <select id="findById" resultType="b2c.example.domain.City">
-        select * from city where id = #{id,jdbcType=NUMERIC}
+        select * from city where id = #{id,jdbcType=NUMERIC} and city_name =#{name,jdbcType=VARCHAR}
+    </select>
+
+    <select id="findByName" resultType="b2c.example.domain.City">
+        select * from city where id = #{id,jdbcType=VARCHAR}
     </select>
 </mapper>
