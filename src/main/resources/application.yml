@@ -14,3 +14,7 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: b2c.example.domain
   configLocation: classpath:mybatis-config.xml
+logging:
+  level:
+
+
